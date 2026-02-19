@@ -1,34 +1,44 @@
 {% extends "base.html" %}
-
 {% block content %}
-<h2>Player Registration</h2>
+<h1>Player Registration</h1>
 
-<form method="POST" class="form">
-    <label>Full Name</label>
-    <input type="text" name="name" required>
+<form method="POST">
+  <h3>Player Information</h3>
+  <input name="full_name" placeholder="Full Name" required>
+  <input type="date" name="dob" required>
+  <input name="age" type="number" required>
+  <select name="gender"><option>Male</option><option>Female</option></select>
+  <input name="school" placeholder="School">
+  <input name="grade" placeholder="Class / Grade">
+  <input name="position" placeholder="Playing Position">
+  <input name="height" placeholder="Height">
+  <input name="previous_team" placeholder="Previous Team">
+  <input name="tshirt_size" placeholder="T-Shirt Size">
 
-    <label>Email</label>
-    <input type="email" name="email" required>
+  <h3>Guardian</h3>
+  <input name="guardian_name" placeholder="Guardian Name">
+  <input name="guardian_relation" placeholder="Relationship">
+  <input name="guardian_phone1" placeholder="Primary Phone">
+  <input name="guardian_phone2" placeholder="Secondary Phone">
+  <input name="guardian_email" placeholder="Email">
+  <input name="guardian_occupation" placeholder="Occupation">
 
-    <label>Phone (2567XXXXXXXX)</label>
-    <input type="text" name="phone" required>
+  <h3>Medical</h3>
+  <textarea name="medical_conditions" placeholder="Medical Conditions"></textarea>
+  <textarea name="injuries" placeholder="Previous Injuries"></textarea>
+  <textarea name="allergies" placeholder="Allergies"></textarea>
+  <textarea name="medication" placeholder="Medication"></textarea>
+  <input name="emergency_contact" placeholder="Emergency Contact">
 
-    <label>Date of Birth</label>
-    <input type="date" name="dob" required>
+  <h3>Training</h3>
+  <select name="skill_level">
+    <option>Beginner</option>
+    <option>Intermediate</option>
+    <option>Advanced</option>
+  </select>
+  <textarea name="goals" placeholder="Training Goals"></textarea>
 
-    <label>Gender</label>
-    <select name="gender" required>
-        <option value="">Select</option>
-        <option>Male</option>
-        <option>Female</option>
-    </select>
-
-    <label>Occupation</label>
-    <input type="text" name="occupation">
-
-    <label>City</label>
-    <input type="text" name="city">
-
-    <button type="submit" class="btn">Submit Registration</button>
+  <button type="submit">Submit Registration</button>
 </form>
 {% endblock %}
+

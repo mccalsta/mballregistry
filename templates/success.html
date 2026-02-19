@@ -1,1 +1,9 @@
-<SUCCESS_HTML>
+{% extends "base.html" %}
+{% block content %}
+<h1>Registration Successful</h1>
+<p>ID: {{ registration.id }}</p>
+<img src="data:image/png;base64,{{ qr_code }}">
+<a href="{{ url_for('receipt', reg_id=registration.id) }}">
+  <button>Download Receipt</button>
+</a>
+{% endblock %}

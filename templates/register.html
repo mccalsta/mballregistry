@@ -1,1 +1,34 @@
-<REGISTER_HTML>
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Player Registration</h2>
+
+<form method="POST" class="form">
+    <label>Full Name</label>
+    <input type="text" name="name" required>
+
+    <label>Email</label>
+    <input type="email" name="email" required>
+
+    <label>Phone (2567XXXXXXXX)</label>
+    <input type="text" name="phone" required>
+
+    <label>Date of Birth</label>
+    <input type="date" name="dob" required>
+
+    <label>Gender</label>
+    <select name="gender" required>
+        <option value="">Select</option>
+        <option>Male</option>
+        <option>Female</option>
+    </select>
+
+    <label>Occupation</label>
+    <input type="text" name="occupation">
+
+    <label>City</label>
+    <input type="text" name="city">
+
+    <button type="submit" class="btn">Submit Registration</button>
+</form>
+{% endblock %}

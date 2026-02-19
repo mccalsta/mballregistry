@@ -1,1 +1,10 @@
-<HOME_HTML>
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+    <h2>Train. Grow. Excel.</h2>
+    <p>Welcome to Miracle Basketball Academy – building champions on and off the court.</p>
+
+    <a href="{{ url_for('register') }}" class="btn">Register Now</a>
+</section>
+{% endblock %}

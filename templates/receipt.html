@@ -1,1 +1,15 @@
-<RECEIPT_HTML>
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Registration Receipt</h2>
+
+<div class="card">
+    <p><strong>Name:</strong> {{ registration.name }}</p>
+    <p><strong>Email:</strong> {{ registration.email }}</p>
+    <p><strong>Phone:</strong> {{ registration.phone }}</p>
+    <p><strong>City:</strong> {{ registration.city }}</p>
+    <p><strong>Registration ID:</strong> {{ registration.id }}</p>
+</div>
+
+<a href="{{ url_for('home') }}" class="btn">Back to Home</a>
+{% endblock %}
